@@ -1,0 +1,28 @@
+ <!-- Nueva pestaña de detalles logísticos en la vista de formulario -->
+    <record id="view_order_form_inherit_vessel_route" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.vessel.route</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Gross Margin">
+                    <group>
+                        <field name="exchange_rate_usd_eur"/>
+                        <field name="vessel_route"/>
+                        <field name="number_of_containers"/>
+                        <field name="freight_cost"/>
+                        <field name="warning_message"/>
+                        <field name="number_of_shipments"/>
+                        <field name="bl_cost"/>
+                        <field name="custom_clearance"/>
+                        <field name="commission"/>
+                        <field name="bank_charge"/>
+                        <field name="palletization_cost"/>
+                        <field name="fob_cost"/>
+                        <field name="costo_total"/>
+                        <field name="x_margen"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
