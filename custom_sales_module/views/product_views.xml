@@ -1,0 +1,11 @@
+<record id="product_product_tree_view_inherit_custom" model="ir.ui.view">
+    <field name="name">product.product.tree.inherit.custom</field>
+    <field name="model">product.product</field>
+    <field name="inherit_id" ref="product.product_product_tree_view"/>
+    <field name="arch" type="xml">
+        <!-- Localizamos el campo 'standard_price' y agregamos 'x_studio_cost_usd' justo después -->
+        <xpath expr="//field[@name='standard_price']" position="after">
+            <field name="x_studio_cost_usd" string="Cost USD" widget="monetary" optional="show"/>
+        </xpath>
+    </field>
+</record>
