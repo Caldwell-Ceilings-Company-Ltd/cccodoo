@@ -5,7 +5,7 @@
     <field name="arch" type="xml">
         <!-- Localizamos el campo 'standard_price' y agregamos 'x_studio_cost_usd' justo después -->
         <xpath expr="//field[@name='standard_price']" position="after">
-            <field name="x_studio_cost_usd" string="Cost USD" widget="monetary" optional="show"/>
+            <field name="x_studio_cost_usd" string="Cost USD" widget="monetary"/>
         </xpath>
     </field>
 </record>
