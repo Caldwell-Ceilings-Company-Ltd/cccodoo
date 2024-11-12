@@ -1,7 +1,7 @@
 from odoo import models, fields
 
-class ProductProduct(models.Model):
-    _inherit = 'product.product'
+class ProductTemplate(models.Model):
+    _inherit = 'product.template'
 
     x_studio_cost_usd = fields.Monetary(
         string="Cost USD",
