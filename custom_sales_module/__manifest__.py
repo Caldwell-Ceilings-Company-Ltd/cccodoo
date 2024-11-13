@@ -5,7 +5,6 @@
     'summary': 'Custom modifications for sales and product modules',
     'depends': ['sale', 'product'],
     'data': [
-        'views/product_views.xml',
         'views/sale_order_views.xml',
         'views/sale_order_line_views.xml',
     ],
