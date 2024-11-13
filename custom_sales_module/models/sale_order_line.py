@@ -1,3 +1,4 @@
+# sale_order_line.py
 from odoo import models, fields, api
 
 class SaleOrderLine(models.Model):
@@ -16,9 +17,8 @@ class SaleOrderLine(models.Model):
         readonly=True
     )
 
-    @api.depends('product_id', 'product_id.x_studio_cost_usd')
+    @api.depends('product_id', 'product_id.product_tmpl_id.standard_price')
     def _compute_cost_fob(self):
         for record in self:
             if record.product_id:
-                record.x_studio_cost_fob = record.product_id.x_studio_cost_usd
-
+                record.x_studio_cost_fob = record.product_id.product_tmpl_id.standard_price
